@@ -1,0 +1,23 @@
+/* Carousel marquee for partners */
+.marquee-viewport {
+	overflow: hidden;
+}
+.marquee {
+	display: flex;
+	gap: 2rem;
+	align-items: center;
+	animation: marquee 20s linear infinite;
+}
+.marquee:hover {
+	animation-play-state: paused;
+}
+@keyframes marquee {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(-50%); }
+}
+
+/* Small helper to ensure repeated items keep spacing */
+.marquee > * {
+	flex: 0 0 auto;
+}
+
